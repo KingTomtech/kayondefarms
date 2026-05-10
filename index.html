@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>KAYMARY ENTERPRISE | Farm to Doorstep</title>
-    <meta name="description" content="Freshly harvested milk, sour cream, and premium livestock (pigs, goats, sheep) delivered directly from our farm to your doorstep.">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+    <meta name="theme-color" content="#1B4D2E"/>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kaymaryenterprise.com/">
+    <title>KAYMARY ENTERPRISE | Farm to Doorstep - Fresh Dairy & Livestock in Zambia</title>
+    <meta name="description" content="Freshly harvested milk, sour cream, and premium livestock (pigs, goats, sheep) delivered directly from our farm to your doorstep in Zambia. 100% natural, fresh daily.">
+    <meta name="keywords" content="fresh milk, sour cream, livestock, pigs, goats, sheep, farm delivery, Zambia, dairy, natural, organic">
+    <meta name="author" content="KAYMARY ENTERPRISE">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaymaryenterprise.com/">
+    <meta property="og:title" content="KAYMARY ENTERPRISE | Farm to Doorstep">
+    <meta property="og:description" content="Freshly harvested milk, sour cream, and premium livestock delivered directly from our farm to your doorstep.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80">
+    <meta property="og:locale" content="en_ZM">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KAYMARY ENTERPRISE | Farm to Doorstep">
+    <meta name="twitter:description" content="Freshly harvested milk, sour cream, and premium livestock delivered directly from our farm to your doorstep.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80">
+    
+    <!-- Preconnect to external domains for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
@@ -22,21 +49,39 @@
                         "background-light": "#F9FFF9",
                     },
                     fontFamily: { "display": ["Work Sans", "sans-serif"] },
+                    animation: {
+                        "fade-in": "fadeIn 0.8s ease-out forwards",
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            "0%": { opacity: "0", transform: "translateY(20px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" },
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')",
+                    }
                 },
             },
         }
     </script>
     <style>
-        body { font-family: 'Work Sans', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Work Sans', sans-serif; }
         .hero-gradient { background: linear-gradient(rgba(27, 77, 46, 0.8), rgba(0, 0, 0, 0.5)); }
+        /* Hide material symbols until loaded */
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        /* Prevent layout shift on images */
+        img { content-visibility: auto; }
     </style>
 </head>
 
-<body class="bg-background-light text-slate-900">
+<body class="bg-background-light text-slate-900 antialiased">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[100]">Skip to main content</a>
 
-    <header class="sticky top-0 z-50 flex items-center bg-white/95 backdrop-blur-sm p-4 border-b border-primary/10 justify-between">
+    <header class="sticky top-0 z-50 flex items-center bg-white/95 backdrop-blur-sm p-4 border-b border-primary/10 justify-between" role="banner">
         <div class="flex items-center gap-2">
-            <div class="text-white flex size-10 shrink-0 items-center justify-center bg-primary rounded-lg shadow-md">
+            <div class="text-white flex size-10 shrink-0 items-center justify-center bg-primary rounded-lg shadow-md" aria-hidden="true">
                 <span class="material-symbols-outlined text-2xl">agriculture</span>
             </div>
             <div>
@@ -44,22 +89,21 @@
                 <p class="text-[10px] font-bold text-accent-orange tracking-[0.2em] uppercase">Enterprise</p>
             </div>
         </div>
-        <nav class="hidden md:flex gap-6 font-bold text-sm text-primary">
-            <a href="#home" class="hover:text-accent-orange">Home</a>
-            <a href="#offerings" class="hover:text-accent-orange">Offerings</a>
-            <a href="#contact" class="hover:text-accent-orange">Contact</a>
+        <nav class="hidden md:flex gap-6 font-bold text-sm text-primary" aria-label="Main navigation">
+            <a href="#home" class="hover:text-accent-orange transition-colors">Home</a>
+            <a href="#offerings" class="hover:text-accent-orange transition-colors">Offerings</a>
+            <a href="#contact" class="hover:text-accent-orange transition-colors">Contact</a>
         </nav>
-        <a href="https://wa.me/260968375404" class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg hover:bg-leaf-green transition-all">Order Now</a>
+        <a href="https://wa.me/260968375404" class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg hover:bg-leaf-green transition-all" aria-label="Order now via WhatsApp">Order Now</a>
     </header>
 
-    <main class="max-w-4xl mx-auto">
+    <main id="main-content" class="max-w-4xl mx-auto" role="main">
         
-        <section id="home" class="p-4">
-            <div class="relative flex min-h-[500px] flex-col gap-6 bg-cover bg-center rounded-3xl items-center justify-center p-8 text-center shadow-2xl overflow-hidden" 
-                 style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80');">
+        <section id="home" class="p-4" aria-labelledby="home-heading">
+            <div class="relative flex min-h-[500px] flex-col gap-6 bg-hero-pattern bg-cover bg-center rounded-3xl items-center justify-center p-8 text-center shadow-2xl overflow-hidden">
                 <div class="flex flex-col gap-4 animate-fade-in">
                     <span class="bg-accent-orange text-white text-[10px] font-black tracking-[0.3em] uppercase py-1 px-3 rounded-full mx-auto w-fit">Direct from our farm</span>
-                    <h2 class="text-white text-5xl font-black leading-tight tracking-tight md:text-6xl">
+                    <h2 id="home-heading" class="text-white text-5xl font-black leading-tight tracking-tight md:text-6xl">
                         To your <span class="text-leaf-green">doorstep!</span>
                     </h2>
                     <p class="text-white/90 text-lg font-medium max-w-lg mx-auto">
@@ -72,22 +116,22 @@
             </div>
         </section>
 
-        <section class="flex justify-around py-8 px-4 text-center">
+        <section class="flex justify-around py-8 px-4 text-center" aria-label="Key features">
             <div><p class="text-primary font-black text-xl">100%</p><p class="text-xs font-bold uppercase text-slate-500">Natural</p></div>
             <div class="border-x border-slate-200 px-8"><p class="text-primary font-black text-xl">Fresh</p><p class="text-xs font-bold uppercase text-slate-500">Daily</p></div>
             <div><p class="text-primary font-black text-xl">Zambia</p><p class="text-xs font-bold uppercase text-slate-500">Wide Delivery</p></div>
         </section>
 
-        <section id="offerings" class="px-6 py-12 bg-white rounded-t-[3rem] shadow-inner">
+        <section id="offerings" class="px-6 py-12 bg-white rounded-t-[3rem] shadow-inner" aria-labelledby="offerings-heading">
             <div class="flex flex-col items-center mb-10">
-                <h3 class="text-3xl font-black text-primary mb-2">Our Offerings</h3>
+                <h3 id="offerings-heading" class="text-3xl font-black text-primary mb-2">Our Offerings</h3>
                 <div class="h-1.5 w-20 bg-accent-orange rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="group p-1 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl transition-all hover:shadow-xl">
                     <div class="bg-white p-6 rounded-[calc(1.5rem-1px)] h-full">
-                        <div class="bg-primary/10 text-primary w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <div class="bg-primary/10 text-primary w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors" aria-hidden="true">
                             <span class="material-symbols-outlined text-3xl">water_drop</span>
                         </div>
                         <h4 class="text-xl font-black mb-2">Freshly Harvested</h4>
@@ -98,7 +142,7 @@
 
                 <div class="group p-1 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl transition-all hover:shadow-xl">
                     <div class="bg-white p-6 rounded-[calc(1.5rem-1px)] h-full">
-                        <div class="bg-primary/10 text-primary w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <div class="bg-primary/10 text-primary w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors" aria-hidden="true">
                             <span class="material-symbols-outlined text-3xl">pets</span>
                         </div>
                         <h4 class="text-xl font-black mb-2">Livestock</h4>
@@ -109,23 +153,23 @@
             </div>
         </section>
 
-        <section id="contact" class="px-4 py-12">
+        <section id="contact" class="px-4 py-12" aria-labelledby="contact-heading">
             <div class="bg-primary rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
                 <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
                     <div class="md:w-1/2">
-                        <h3 class="text-4xl font-black mb-4">Ready to order?</h3>
+                        <h3 id="contact-heading" class="text-4xl font-black mb-4">Ready to order?</h3>
                         <p class="text-white/70 mb-8 font-medium">Competitive prices, excellent customer service, and fresh delivery guaranteed.</p>
                         <div class="space-y-4">
                             <a href="https://wa.me/260968375404" class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl hover:bg-white/20 transition-all border border-white/10">
-                                <span class="material-symbols-outlined">chat</span>
+                                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
                                 <div><p class="text-xs uppercase font-bold opacity-60">WhatsApp / Call</p><p class="text-lg font-bold">+260 96 8375404</p></div>
                             </a>
                             <a href="tel:0770713619" class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl hover:bg-white/20 transition-all border border-white/10">
-                                <span class="material-symbols-outlined">call</span>
+                                <span class="material-symbols-outlined" aria-hidden="true">call</span>
                                 <div><p class="text-xs uppercase font-bold opacity-60">Mobile Line</p><p class="text-lg font-bold">0770713619</p></div>
                             </a>
                             <a href="https://wa.me/260770123726" class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl hover:bg-white/20 transition-all border border-white/10">
-                                <span class="material-symbols-outlined">chat</span>
+                                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
                                 <div><p class="text-xs uppercase font-bold opacity-60">Secondary Line</p><p class="text-lg font-bold">+260 770123726</p></div>
                             </a>
                         </div>
@@ -133,26 +177,64 @@
                     <div class="md:w-1/2 bg-white/5 p-6 rounded-3xl border border-white/5 backdrop-blur-md">
                         <h4 class="text-center font-black text-xl mb-4">Quality Assured</h4>
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-leaf-green">check_circle</span> Fresh & Natural</li>
-                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-leaf-green">check_circle</span> Competitive Prices</li>
-                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-leaf-green">check_circle</span> Prompt Delivery</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-leaf-green" aria-hidden="true">check_circle</span> Fresh & Natural</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-leaf-green" aria-hidden="true">check_circle</span> Competitive Prices</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-leaf-green" aria-hidden="true">check_circle</span> Prompt Delivery</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="text-center py-10 text-slate-400 text-xs font-bold tracking-widest uppercase">
+        <footer class="text-center py-10 text-slate-400 text-xs font-bold tracking-widest uppercase" role="contentinfo">
             <p>&copy; 2026 KAYMARY ENTERPRISE. All Rights Reserved.</p>
+            <p class="mt-2 opacity-70">Fresh • Natural • Local</p>
         </footer>
 
     </main>
 
+    <!-- Mobile floating action button -->
     <div class="fixed bottom-6 right-6 md:hidden z-50">
-        <a href="https://wa.me/260968375404" class="bg-leaf-green text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
+        <a href="https://wa.me/260968375404" class="bg-leaf-green text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform" aria-label="Contact us on WhatsApp">
             <span class="material-symbols-outlined text-3xl">chat</span>
         </a>
     </div>
+
+    <!-- Structured Data for SEO (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KAYMARY ENTERPRISE",
+      "description": "Fresh dairy and livestock delivery from farm to doorstep in Zambia",
+      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80",
+      "telephone": "+260968375404",
+      "url": "https://kaymaryenterprise.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZM"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "ZM"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "06:00",
+        "closes": "20:00"
+      },
+      "sameAs": [],
+      "priceRange": "$$"
+    }
+    </script>
 
 </body>
 </html>
